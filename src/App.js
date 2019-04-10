@@ -53,7 +53,6 @@ class App extends Component {
   }
 
   removeNote(noteId){
-    console.log(noteId);
     this.database.child(noteId).remove();
   }
 
@@ -61,7 +60,7 @@ class App extends Component {
     return (
       <div className="notesWrapper">
         <div className="notesHeader">
-          <div className="heading">React & Firebase To-Do List</div>
+          <div className="heading">React & Firebase To-Do List <span>({this.state.notes.length})</span></div>
         </div>
         
         <div className="notesBody">
